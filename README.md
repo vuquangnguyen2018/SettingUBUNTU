@@ -118,6 +118,15 @@ nvidia-settings -a ‘[fan:0]/GPUTargetFanSpeed=100’
 # INSTALL GOOGLE CHROME
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+# INSTALL SNAP -> SPOTIFY , VLC , AUDACITY, TELEGRAM,...
+sudo apt install snap
+sudo apt install git
+sudo snap install spotify
+sudo snap install vlc
+sudo snap install telegram-desktop
+sudo snap install code --classic
+
 ```
 # INSTALL R AND PYTHON
 ```c
