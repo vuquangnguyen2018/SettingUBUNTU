@@ -32,6 +32,15 @@ nvidia-settings -a GPUFanControlState=1 -a GPUTargetFanSpeed=30
 nvidia-settings -V -c :0 -a '[gpu:0]/GPUFanControlState=1' -a '[fan:0]/GPUTargetFanSpeed='"30" -a '[fan:1]/GPUTargetFanSpeed='"40"
 ----------------------------------
 
+
+SOLUTION 1:
+
+apt install nvidia-utils-510
+apt install nvidia-settings
+
+
+---------------------
+
 SOLUTION 2:
 
 Solved this issue by editing the file: /./etc/X11/Xwrapper.config
