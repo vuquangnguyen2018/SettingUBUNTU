@@ -70,6 +70,14 @@ Therefore the Xwrapper.config file will be:
 needs_root_rights=yes
 allowed_users=console
 
+
+---
+SOLUTION 3
+
+sudo nvidia-xconfig
+sudo nvidia-xconfig --cool-bits=4
+
+
 ---------------------------
 
 nvidia-settings -a ‘[gpu:0]/GPUFanControlState=1’
