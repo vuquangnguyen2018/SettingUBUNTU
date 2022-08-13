@@ -18,3 +18,14 @@ https://itsmeit.net/cai-unikey-go-tieng-viet-tren-ubuntu-22-04-20-04.html
 
 # CAI DAT THEME MACOS
 https://youtu.be/Y6k7THQ3x6U
+
+
+# CAI DAT NVIDIA
+```ruby
+
+nvidia-xconfig -a --cool-bits=28 --allow-empty-initial-configuration
+
+nvidia-settings -a ‘[gpu:0]/GPUFanControlState=1’
+nvidia-settings -a ‘[fan:0]/GPUTargetFanSpeed=100’
+
+```
