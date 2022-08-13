@@ -20,6 +20,30 @@ FONT SF: https://github.com/asterik12/x-special-nautilus-clipboard-copy-file-hom
 # CAI DAT THEME MACOS
 https://youtu.be/Y6k7THQ3x6U
 
+```ruby
+STEP 1:
+
+sudo apt install gnome-tweaks gnome-shell-extenstions -y
+
+STEP 2: Gnome Extensions org
+https://extensions.gnome.org/
+
+-> TURN ON: 
+User themes
+
+
+STEP 3: THEME
+https://github.com/vinceliuice/WhiteSur-gtk-theme.git
+git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
+cd WhiteSur-gtk-theme
+./install.sh -t all -N glassy -s 220
+sudo ./tweaks.sh -g
+
+STEP 4: ICONS
+https://www.gnome-look.org/p/1400021
+
+
+```
 
 # CAI DAT NVIDIA
 ```ruby
