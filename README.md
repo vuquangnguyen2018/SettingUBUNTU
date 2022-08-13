@@ -23,8 +23,12 @@ https://youtu.be/Y6k7THQ3x6U
 # CAI DAT NVIDIA
 ```ruby
 
+ROOT USER: 
+
 nvidia-xconfig -a --cool-bits=28 --allow-empty-initial-configuration
 
+nvidia-settings -a GPUFanControlState=1 -a GPUTargetFanSpeed=30
+ 
 nvidia-settings -a ‘[gpu:0]/GPUFanControlState=1’
 nvidia-settings -a ‘[fan:0]/GPUTargetFanSpeed=100’
 
