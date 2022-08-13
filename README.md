@@ -137,6 +137,23 @@ sudo snap install code --classic
 
 wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo gpg --dearmor -o /usr/share/keyrings/r-project.gpg
 echo "deb [signed-by=/usr/share/keyrings/r-project.gpg] https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" | sudo tee -a /etc/apt/sources.list.d/r-project.list
+sudo apt update
+sudo apt install --no-install-recommends r-base
+
+install.packages('txtplot')
+
+
+# INSTALL R STUDIO
+https://www.rstudio.com/products/rstudio/download/#download
+sudo dpkg -i rstudio.deb
+sudo apt --fix-broken install
+
+# INSTALL 
+sudo add-apt-repository universe
+cd ~/Downloads
+wget http://mirrors.kernel.org/ubuntu/pool/universe/libc/libcloudproviders/libcloudproviders0_0.3.0-1_amd64.deb
+sudo apt install ./libcloudproviders0_0.3.0-1_amd64.deb
+sudo apt-get install pantheon-files
 
 ```
 
