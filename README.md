@@ -23,7 +23,7 @@ https://youtu.be/Y6k7THQ3x6U
 ```ruby
 STEP 1:
 
-sudo apt install gnome-tweaks gnome-shell-extenstions -y
+sudo apt install gnome-tweaks gnome-shell-extensions -y
 
 STEP 2: Gnome Extensions org
 https://extensions.gnome.org/
