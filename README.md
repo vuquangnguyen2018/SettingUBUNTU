@@ -15,6 +15,7 @@ $ env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['Ba
 
 https://itsmeit.net/cai-unikey-go-tieng-viet-tren-ubuntu-22-04-20-04.html
 
+FONT SF: https://github.com/asterik12/x-special-nautilus-clipboard-copy-file-home-ashish-Downloads-San-Francisco-Pro-Fonts-master.git
 
 # CAI DAT THEME MACOS
 https://youtu.be/Y6k7THQ3x6U
