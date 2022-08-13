@@ -122,6 +122,8 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 # INSTALL SNAP -> SPOTIFY , VLC , AUDACITY, TELEGRAM,...
 sudo apt install snap
 sudo apt install git
+sudo apt install telegram-desktop
+
 sudo snap install spotify
 sudo snap install vlc
 sudo snap install telegram-desktop
