@@ -30,6 +30,9 @@ https://extensions.gnome.org/
 
 -> TURN ON: 
 User themes
+Blur my shell
+Compiz alike magic lamp effect
+
 
 
 STEP 3: THEME
@@ -41,6 +44,7 @@ sudo ./tweaks.sh -g
 
 STEP 4: ICONS
 https://www.gnome-look.org/p/1400021
+-> EXTRACT to COPY to FOLDER: /home/.icons
 
 
 ```
