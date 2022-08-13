@@ -25,6 +25,8 @@ STEP 1:
 
 sudo apt install gnome-tweaks gnome-shell-extensions -y
 
+https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep
+
 STEP 2: Gnome Extensions org
 https://extensions.gnome.org/
 
@@ -36,7 +38,6 @@ Compiz alike magic lamp effect
 
 
 STEP 3: THEME
-https://github.com/vinceliuice/WhiteSur-gtk-theme.git
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
 cd WhiteSur-gtk-theme
 ./install.sh -t all -N glassy -s 220
