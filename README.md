@@ -148,12 +148,66 @@ https://www.rstudio.com/products/rstudio/download/#download
 sudo dpkg -i rstudio.deb
 sudo apt --fix-broken install
 
-# INSTALL 
-sudo add-apt-repository universe
-cd ~/Downloads
-wget http://mirrors.kernel.org/ubuntu/pool/universe/libc/libcloudproviders/libcloudproviders0_0.3.0-1_amd64.deb
-sudo apt install ./libcloudproviders0_0.3.0-1_amd64.deb
-sudo apt-get install pantheon-files
+```
+
+
+# INSTALL SQL SERVER
+```ruby
+sudo apt install docker
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker 
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+
+sudo docker pull mcr.microsoft.com/mssql/server:2019-latest
+----
+sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=1111" \
+   -p 1433:1433 --name sql1 --hostname sql1 \
+   -d \
+   mcr.microsoft.com/mssql/server:2019-latest
+   
+sudo docker ps -a
+docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
+
+SELECT @@SERVERNAME,
+    SERVERPROPERTY('ComputerNamePhysicalNetBIOS'),
+    SERVERPROPERTY('MachineName'),
+    SERVERPROPERTY('ServerName');
+    
+Connect to SQL Server
+sudo docker exec -it sql1 "bash"
+/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "1111"
+
+
+https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&preserve-view=true&pivots=cs1-bash
+
+Create a new database
+
+CREATE DATABASE TestDB;
+SELECT Name from sys.databases;
+USE TestDB;
+CREATE TABLE Inventory (id INT, name NVARCHAR(50), quantity INT);
+INSERT INTO Inventory VALUES (1, 'banana', 150); INSERT INTO Inventory VALUES (2, 'orange', 154);
+SELECT * FROM Inventory WHERE quantity > 152;
+
+
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get update
+sudo apt-get -y install postgresql
+
+
+
+```
+
+
+# INSTALL POSTGRESQL
+```ruby
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get update
+sudo apt-get -y install postgresql
 
 ```
 
