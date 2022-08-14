@@ -47,6 +47,10 @@ STEP 4: ICONS
 https://www.gnome-look.org/p/1400021
 -> EXTRACT to COPY to FOLDER: /home/.icons
 
+STEP5: TRUE FONTS
+sudo add-apt-repository multiverse
+sudo apt update && sudo apt install ttf-mscorefonts-installer
+
 
 ```
 
